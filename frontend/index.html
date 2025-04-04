@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Frontend Docker - Desafio</h1>
+    <div id="response"></div>
+
+    <script>
+      fetch('http://localhost:3001/api')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('response').innerText = data.message + ' - ' + data.db_time;
+        });
+    </script>
+  </body>
+</html>
